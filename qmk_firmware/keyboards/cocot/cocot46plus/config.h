@@ -53,8 +53,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_B { D2 }
 #define ENCODER_RESOLUTION 4
 
-#define TAPPING_FORCE_HOLD
+// #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM_PER_KEY
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN B6
@@ -82,4 +84,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ADNS5050_CS_PIN           B5
 
 #define POINTING_DEVICE_ROTATION_180
-#define OLED_FONT_H "keyboards/aki27/cocot46plus/glcdfont.c"
+#define OLED_FONT_H "keyboards/cocot/cocot46plus/glcdfont.c"

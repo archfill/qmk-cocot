@@ -48,7 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define COCOT_ROTATION_ANGLE { -60, -45, -30, -15, 0, 15, 30, 45, 60 }
 #endif
 #ifndef COCOT_ROTATION_DEFAULT
-#    define COCOT_ROTATION_DEFAULT 2
+#    define COCOT_ROTATION_DEFAULT 4
 #endif
 
 
@@ -253,16 +253,16 @@ void oled_write_layer_state(void) {
 
     switch (get_highest_layer(layer_state | default_layer_state)) {
         case 0:
-            oled_write_P(PSTR("Base "), false);
+            oled_write_P(PSTR("L0   "), false);
             break;
         case 1:
-            oled_write_P(PSTR("Lower"), false);
+            oled_write_P(PSTR("L1   "), false);
             break;
         case 2:
-            oled_write_P(PSTR("Raise"), false);
+            oled_write_P(PSTR("L2   "), false);
             break;
         case 3:
-            oled_write_P(PSTR("Mouse"), false);
+            oled_write_P(PSTR("L3   "), false);
             break;
         case 4:
             oled_write_P(PSTR("L4   "), false);
