@@ -3,7 +3,12 @@
 
 #pragma once
 // #include "config_common.h"
-#define OLED_FONT_H "keyboards/aki27/cocot36plus/lib/glcdfont.c"
+#define OLED_FONT_H "keyboards/cocot/cocot36plus/lib/glcdfont.c"
+
+// VIAL
+#define VIAL_KEYBOARD_UID {0x9C, 0x13, 0x0B, 0x78, 0x8D, 0x32, 0x93, 0x01}
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
 
 /* VIA */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 8
@@ -16,7 +21,7 @@
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
 // #define TAPPING_TERM_PER_KEY
-#define IGNORE_MOD_TAP_INTERRUPT
+// #define IGNORE_MOD_TAP_INTERRUPT
 
 /* Encoder */
 #define ENCODERS_PAD_A { GP28 }
@@ -41,7 +46,7 @@
 
 /* RGB LED */
 #define WS2812_PIO_USE_PIO1
-#define RGB_DI_PIN GP0
+#define WS2812_DI_PIN GP0
 
 #ifdef RGBLIGHT_ENABLE
     #define RGBLED_NUM 45
