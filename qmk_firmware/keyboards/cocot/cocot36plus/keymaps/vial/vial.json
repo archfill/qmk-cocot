@@ -11,7 +11,10 @@
     {"name": "ROT_L15", "title": "Rotate sensor Y-axis by 15 degrees counterclockwise", "shortName": "ROT_L15"},
     {"name": "SCRL_MO", "title": "Enable scroll mode while being pressed", "shortName": "SCRL_MO"},
     {"name": "SCRL_TO", "title": "Toggle scroll and cursor mode each time pressed", "shortName": "SCRL_TO"},
-    {"name": "SCRL_IN", "title": "Invert scroll direction", "shortName": "SCRL_IN"}
+    {"name": "SCRL_IN", "title": "Invert scroll direction", "shortName": "SCRL_IN"},
+    {"name": "MS_L_LK", "title": "Mouse layer on/off toggle", "shortName": "MS_L_LK"},
+    {"name": "KC_TG_OS", "title": "OS switching", "shortName": "KC_TG_OS"},
+    {"name": "KC_TG_AM", "title": "Automatic mouse mode switching", "shortName": "KC_TG_AM"}
   ],
   "layouts": {
     "keymap": [

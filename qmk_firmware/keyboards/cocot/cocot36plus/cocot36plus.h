@@ -68,13 +68,16 @@ enum cocot_keycodes {
     COCOT_SAFE_RANGE,
 };
 
-// #define CPI_SW QK_KB_0
-// #define SCRL_SW QK_KB_1
-// #define ROT_R15 QK_KB_2
-// #define ROT_L15 QK_KB_3
-// #define SCRL_MO QK_KB_4
-// #define SCRL_TO QK_KB_5
-// #define SCRL_IN QK_KB_6
+#define CPI_SW QK_KB_0
+#define SCRL_SW QK_KB_1
+#define ROT_R15 QK_KB_2
+#define ROT_L15 QK_KB_3
+#define SCRL_MO QK_KB_4
+#define SCRL_TO QK_KB_5
+#define SCRL_IN QK_KB_6
+#define MS_L_LK QK_KB_7
+#define KC_TG_OS QK_KB_8
+#define KC_TG_AM QK_KB_9
 
 bool encoder_update_user(uint8_t index, bool clockwise);
 bool encoder_update_kb(uint8_t index, bool clockwise);
