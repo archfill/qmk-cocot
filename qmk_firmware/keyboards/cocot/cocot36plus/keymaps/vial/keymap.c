@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,              KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
         KC_A,     KC_S,     KC_D,     KC_F,     KC_G,              KC_H,     KC_J,     KC_K,     KC_L,     KC_MINS,
         KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,              KC_N,     KC_M,     KC_COMM,  KC_DOT,   MT_A_SH,
-                  RGB_MOD,  MT_G_EN,  L2_SPC,   KC_LCTL,  MS_BTN1, MT_S_BS,  L1_ENT,   MO(3),    RGB_RMOD
+                  RGB_MOD,  MT_G_EN,  L2_SPC,   TD(0),    MS_BTN1, MT_S_BS,  L1_ENT,   MO(3),    RGB_RMOD
     ),
     [1] = LAYOUT(
         KC_BSLS,  KC_CIRC,  KC_EXLM,  KC_AMPR,  KC_PIPE,           KC_AT,    KC_EQL,   KC_PLUS,  KC_ASTR,  KC_PERC,
@@ -244,6 +244,17 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
+}
+
+void keyboard_post_init_user(void) {
+    vial_tap_dance_entry_t td = {
+        KC_LNG2,
+        KC_LCTL,
+        KC_LNG1,
+        KC_NO,
+        TAPPING_TERM
+    };
+    dynamic_keymap_set_tap_dance(0, &td); // the first value corresponds to the TD(i) slot
 }
 
 // Tap Dance
