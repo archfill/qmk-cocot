@@ -18,10 +18,13 @@
 #define MATRIX_ROWS 4
 
 /* tapping term */
-#define TAPPING_FORCE_HOLD
+// #define QUICK_TAP_TERM 0
 #define TAPPING_TERM 200
 // #define TAPPING_TERM_PER_KEY
 // #define IGNORE_MOD_TAP_INTERRUPT
+
+// #define PERMISSIVE_HOLD
+// #define PERMISSIVE_HOLD_PER_KEY
 
 /* Encoder */
 #define ENCODERS_PAD_A { GP28 }

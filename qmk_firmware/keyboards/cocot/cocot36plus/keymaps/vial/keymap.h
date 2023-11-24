@@ -6,7 +6,7 @@
 // Layer
 #define L1_ENT LT(1, KC_ENT)
 #define L2_SPC LT(2, KC_SPC)
-#define L6_JA LT(6, KC_LNG1)
+#define L3_JA LT(3, KC_LNG1)
 // Modifier-Tap
 #define MT_S_JA LSFT_T(KC_LNG1)
 #define MT_G_EN LGUI_T(KC_LNG2)
