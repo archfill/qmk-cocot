@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   RGB_MOD,  XXXXXXX,  XXXXXXX,  XXXXXXX,  MS_BTN1, KC_DEL,   M_S_ENT,  KC_LCTL,  RGB_RMOD
     ),
     [3] = LAYOUT(
-        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  M_CS_T,            XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  M_A_GRV,
-        M_SG_4,   XXXXXXX,  M_CS_SC,  M_A_SC,   M_C_UP,            XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
-        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_LNG2,           KC_LNG1,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_INS,
-                  RGB_MOD,  EE_CLR,   _______,  _______,  MS_BTN1, _______,  EE_CLR,   QK_BOOT,  RGB_RMOD
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  M_CS_T,            MS_BTN3,  MS_BTN2,  XXXXXXX,  XXXXXXX,  M_A_GRV,
+        M_SG_4,   XXXXXXX,  M_CS_SC,  M_A_SC,   M_C_UP,            MS_BTN1,  MS_BTN4,  KC_RCTL,  KC_RSFT,  XXXXXXX,
+        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,           _______,  MS_BTN5,  XXXXXXX,  XXXXXXX,  KC_INS,
+                  RGB_MOD,  EE_CLR,   _______,  KC_TG_AM, MS_BTN1, _______,  EE_CLR,   QK_BOOT,  RGB_RMOD
     ),
     [4] = LAYOUT(
         _______,  _______,  _______,  MS_BTN2,  MS_BTN3,           MS_BTN3,  MS_BTN2,  _______,  _______,  TO(5),
