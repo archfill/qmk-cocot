@@ -27,8 +27,7 @@ enum layer_number {
     _RAISE = 2,
     _TRACKBALL = 3,
     _Layer4 = 4,
-    _Layer5 = 5,
-    _Layer6 = 6
+    _Layer5 = 5
 };
 
 
@@ -63,130 +62,89 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                          KC_H,    KC_J,    KC_K,    KC_L,    KC_MINS, KC_QUOT,
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                                          KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSLS,
                         KC_LALT, LN2_GUI, L1_SPC,  KC_LCTL,   KC_MS_BTN1,             KC_MS_BTN2, BS_SFT,  L2_ENT,  LN1_SFT, MO(4),
-                                                                 KC_VOLU, KC_MS_BTN3,  KC_VOLD,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          KC_MS_BTN3,             XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [_LOWER] = LAYOUT(
       _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                         KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
       _______, KC_F11,  _______, _______, M_S_TAB, KC_TAB,                                        KC_ESC,  KC_DEL,  _______, _______, KC_F12,  _______,
                         _______, _______, _______, _______,   KC_MS_BTN4,             KC_MS_BTN5, KC_DEL,  M_S_ENT, _______, _______,
-                                                                 KC_PGUP, KC_MS_BTN3,  KC_PGDN,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          KC_MS_BTN3,             XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [_RAISE] = LAYOUT(
       _______, KC_BSLS, KC_CIRC, KC_EXLM, KC_AMPR, KC_PIPE,                                       KC_AT,   KC_EQL,  KC_PLUS, KC_ASTR, KC_PERC, _______,
       _______, KC_HASH, KC_DLR,  KC_DQUO, KC_QUOT, KC_TILD,                                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_GRV,  _______,
       KC_PGUP, KC_LSFT, KC_COLN, KC_LPRN, KC_LCBR, KC_LBRC,                                       KC_RBRC, KC_RCBR, KC_RPRN, KC_SCLN, _______, KC_PGDN,
                         _______, KC_LALT, _______, KC_LCTL,   KC_MS_BTN4,             KC_MS_BTN5, _______, _______, _______, _______,
-                                                                 KC_PGUP, KC_MS_BTN3,  KC_PGDN,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          KC_MS_BTN3,             XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [_TRACKBALL] = LAYOUT(
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_TOG,                                       SCRL_TO, CPI_SW,  SCRL_SW, ROT_L15, ROT_R15, XXXXXXX,
       XXXXXXX, XXXXXXX, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD,                                       SCRL_MO, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       MO(3),   XXXXXXX, RGB_VAD, RGB_SAD, RGB_HUD,RGB_RMOD,                                       SCRL_IN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   KC_MS_BTN1,             KC_MS_BTN2, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 KC_PGUP, KC_MS_BTN3,  KC_PGDN,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          KC_MS_BTN3,             XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [_Layer4] = LAYOUT(
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  M_CS_T,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       XXXXXXX, M_SG_4,  XXXXXXX, XXXXXXX, M_A_SC,   M_C_UP,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,                                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_INS,  XXXXXXX,
                         QK_BOOT, EE_CLR,  XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 KC_VOLU, KC_MUTE,     KC_VOLD,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          KC_MUTE,                XXXXXXX, XXXXXXX, XXXXXXX
     ),
   [_Layer5] = LAYOUT(
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                         XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 XXXXXXX, XXXXXXX,     XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX
-    ),
-  [_Layer6] = LAYOUT(
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                        XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 XXXXXXX, XXXXXXX,     XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX
+                                                                          XXXXXXX,                XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
 
-keyevent_t encoder1_ccw = {
-    .key = (keypos_t){.row = 4, .col = 2},
-    .pressed = false
+#ifdef ENCODER_MAP_ENABLE
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
+    [0] =   { ENCODER_CCW_CW(KC_VOLU, KC_VOLD) },
+    [1] =   { ENCODER_CCW_CW(_______, _______) },
+    [2] =   { ENCODER_CCW_CW(_______, _______) },
+    [3] =   { ENCODER_CCW_CW(_______, _______) },
+    [4] =   { ENCODER_CCW_CW(_______, _______) },
+    [5] =   { ENCODER_CCW_CW(_______, _______) }
 };
-
-keyevent_t encoder1_cw = {
-    .key = (keypos_t){.row = 4, .col = 5},
-    .pressed = false
-};
-
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            encoder1_cw.pressed = true;
-            encoder1_cw.time = (timer_read() | 1);
-            action_exec(encoder1_cw);
-        } else {
-            encoder1_ccw.pressed = true;
-            encoder1_ccw.time = (timer_read() | 1);
-            action_exec(encoder1_ccw);
-        }
-    }
-
-    return true;
-}
-
-
-void matrix_scan_user(void) {
-
-    if (IS_PRESSED(encoder1_ccw)) {
-        encoder1_ccw.pressed = false;
-        encoder1_ccw.time = (timer_read() | 1);
-        action_exec(encoder1_ccw);
-    }
-
-    if (IS_PRESSED(encoder1_cw)) {
-        encoder1_cw.pressed = false;
-        encoder1_cw.time = (timer_read() | 1);
-        action_exec(encoder1_cw);
-    }
-
-}
-
-
+#endif
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case _LOWER:
-        rgblight_sethsv_range(HSV_BLUE, 0, 2);
+        // rgblight_sethsv_range(HSV_BLUE, 0, 2);
         cocot_set_scroll_mode(true);
         break;
     case _RAISE:
-        rgblight_sethsv_range(HSV_RED, 0, 2);
+        // rgblight_sethsv_range(HSV_RED, 0, 2);
         cocot_set_scroll_mode(true);
         break;
     case _TRACKBALL:
-        rgblight_sethsv_range(HSV_GREEN, 0, 2);
+        // rgblight_sethsv_range(HSV_GREEN, 0, 2);
         cocot_set_scroll_mode(false);
         break;
     case _Layer4:
-        rgblight_sethsv_range(HSV_YELLOW, 0, 2);
+        // rgblight_sethsv_range(HSV_YELLOW, 0, 2);
         cocot_set_scroll_mode(false);
         break;
     case _Layer5:
-        rgblight_sethsv_range(HSV_CYAN, 0, 2);
+        // rgblight_sethsv_range(HSV_CYAN, 0, 2);
         cocot_set_scroll_mode(false);
         break;
-    case _Layer6:
-        rgblight_sethsv_range(HSV_ORANGE, 0, 2);
-        cocot_set_scroll_mode(false);
-        break;
+    // case _Layer6:
+    //     rgblight_sethsv_range(HSV_ORANGE, 0, 2);
+    //     cocot_set_scroll_mode(false);
+    //     break;
     default:
-        rgblight_sethsv_range( 0, 0, 0, 0, 2);
+        // rgblight_sethsv_range( 0, 0, 0, 0, 2);
         cocot_set_scroll_mode(false);
         break;
     }
-    rgblight_set_effect_range( 2, 10);
-      return state;
+    // rgblight_set_effect_range( 2, 10);
+    return state;
 };
 
 

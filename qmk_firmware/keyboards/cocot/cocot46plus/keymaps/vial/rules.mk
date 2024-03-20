@@ -5,3 +5,4 @@ ENCODER_MAP_ENABLE = yes
 TAP_DANCE_ENABLE = no
 COMBO_ENABLE = no
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
+ENCODER_ENABLE = yes

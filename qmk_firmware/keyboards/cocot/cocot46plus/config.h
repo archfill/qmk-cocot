@@ -26,9 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MANUFACTURER aki27
 // #define PRODUCT      cocot46plus
 
-/* VIA */
-#define DYNAMIC_KEYMAP_LAYER_COUNT 5
-
 /* key matrix size */
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 6
@@ -49,9 +46,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define LAYER_STATE_8BIT
 
 /* Rotary encoder */
-#define ENCODERS_PAD_A { D3 }
-#define ENCODERS_PAD_B { D2 }
-#define ENCODER_RESOLUTION 4
+// #define ENCODERS_PAD_A { D3 }
+// #define ENCODERS_PAD_B { D2 }
+// #define ENCODER_RESOLUTION 4
 
 // #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200

@@ -8,6 +8,14 @@
     "pid": "0x0003",
     "vid": "0x1727"
   },
+  "features": {
+    "encoder": true
+  },
+  "encoder": {
+      "rotary": [
+          { "pin_a": "D3", "pin_b": "D2", "resolution": 4 }
+      ]
+  },
   "layouts": {
     "LAYOUT": {
       "layout": [
@@ -58,8 +66,6 @@
         { "matrix": [8, 1], "label": "8,1", "x": 10, "y": 3 },
         { "matrix": [8, 0], "label": "8,0", "x": 11, "y": 3 },
         { "matrix": [3, 4], "label": "3,4", "x": 7, "y": 4 },
-        { "matrix": [4, 2], "label": "4,2", "x": 6.2, "y": 5, "w": 0.75 },
-        { "matrix": [4, 5], "label": "4,5", "x": 8.0, "y": 5, "w": 0.75 },
         { "matrix": [8, 4], "label": "8,4", "x": 10, "y": 6 },
         { "matrix": [9, 2], "label": "9,2", "x": 11, "y": 6 },
         { "matrix": [9, 5], "label": "9,5", "x": 12, "y": 6 }
