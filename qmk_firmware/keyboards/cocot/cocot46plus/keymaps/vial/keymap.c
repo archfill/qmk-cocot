@@ -27,8 +27,6 @@ enum layer_number {
     _RAISE = 2,
     _TRACKBALL = 3,
     _Layer4 = 4,
-    _Layer5 = 5,
-    _Layer6 = 6
 };
 
 
@@ -92,100 +90,94 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,                                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_INS,  XXXXXXX,
                         QK_BOOT, EE_CLR,  XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                  KC_VOLU, KC_MUTE,     KC_VOLD,   XXXXXXX, XXXXXXX, XXXXXXX
-    ),
-  [_Layer5] = LAYOUT(
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                        XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 XXXXXXX, XXXXXXX,     XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX
-    ),
-  [_Layer6] = LAYOUT(
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                        XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,                XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                                                 XXXXXXX, XXXXXXX,     XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
 
-keyevent_t encoder1_ccw = {
-    .key = (keypos_t){.row = 4, .col = 2},
-    .pressed = false
+// keyevent_t encoder1_ccw = {
+//     .key = (keypos_t){.row = 4, .col = 2},
+//     .pressed = false
+// };
+
+// keyevent_t encoder1_cw = {
+//     .key = (keypos_t){.row = 4, .col = 5},
+//     .pressed = false
+// };
+
+// bool encoder_update_user(uint8_t index, bool clockwise) {
+//     if (index == 0) { /* First encoder */
+//         if (clockwise) {
+//             encoder1_cw.pressed = true;
+//             encoder1_cw.time = (timer_read() | 1);
+//             action_exec(encoder1_cw);
+//         } else {
+//             encoder1_ccw.pressed = true;
+//             encoder1_ccw.time = (timer_read() | 1);
+//             action_exec(encoder1_ccw);
+//         }
+//     }
+//
+//     return true;
+// }
+
+
+// void matrix_scan_user(void) {
+//
+//     if (IS_PRESSED(encoder1_ccw)) {
+//         encoder1_ccw.pressed = false;
+//         encoder1_ccw.time = (timer_read() | 1);
+//         action_exec(encoder1_ccw);
+//     }
+//
+//     if (IS_PRESSED(encoder1_cw)) {
+//         encoder1_cw.pressed = false;
+//         encoder1_cw.time = (timer_read() | 1);
+//         action_exec(encoder1_cw);
+//     }
+//
+// }
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] =   { ENCODER_CCW_CW(KC_PGUP, KC_PGDN) },
+    [1] =   { ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+    [2] =   { ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+    [3] =   { ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+    [4] =   { ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
 };
-
-keyevent_t encoder1_cw = {
-    .key = (keypos_t){.row = 4, .col = 5},
-    .pressed = false
-};
-
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            encoder1_cw.pressed = true;
-            encoder1_cw.time = (timer_read() | 1);
-            action_exec(encoder1_cw);
-        } else {
-            encoder1_ccw.pressed = true;
-            encoder1_ccw.time = (timer_read() | 1);
-            action_exec(encoder1_ccw);
-        }
-    }
-
-    return true;
-}
-
-
-void matrix_scan_user(void) {
-
-    if (IS_PRESSED(encoder1_ccw)) {
-        encoder1_ccw.pressed = false;
-        encoder1_ccw.time = (timer_read() | 1);
-        action_exec(encoder1_ccw);
-    }
-
-    if (IS_PRESSED(encoder1_cw)) {
-        encoder1_cw.pressed = false;
-        encoder1_cw.time = (timer_read() | 1);
-        action_exec(encoder1_cw);
-    }
-
-}
-
-
+#endif
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case _LOWER:
-        rgblight_sethsv_range(HSV_BLUE, 0, 2);
+        // rgblight_sethsv_range(HSV_BLUE, 0, 2);
         cocot_set_scroll_mode(true);
         break;
     case _RAISE:
-        rgblight_sethsv_range(HSV_RED, 0, 2);
+        // rgblight_sethsv_range(HSV_RED, 0, 2);
         cocot_set_scroll_mode(true);
         break;
     case _TRACKBALL:
-        rgblight_sethsv_range(HSV_GREEN, 0, 2);
+        // rgblight_sethsv_range(HSV_GREEN, 0, 2);
         cocot_set_scroll_mode(false);
         break;
     case _Layer4:
-        rgblight_sethsv_range(HSV_YELLOW, 0, 2);
+        // rgblight_sethsv_range(HSV_YELLOW, 0, 2);
         cocot_set_scroll_mode(false);
         break;
-    case _Layer5:
-        rgblight_sethsv_range(HSV_CYAN, 0, 2);
-        cocot_set_scroll_mode(false);
-        break;
-    case _Layer6:
-        rgblight_sethsv_range(HSV_ORANGE, 0, 2);
-        cocot_set_scroll_mode(false);
-        break;
+    // case _Layer5:
+    //     rgblight_sethsv_range(HSV_CYAN, 0, 2);
+    //     cocot_set_scroll_mode(false);
+    //     break;
+    // case _Layer6:
+    //     rgblight_sethsv_range(HSV_ORANGE, 0, 2);
+    //     cocot_set_scroll_mode(false);
+    //     break;
     default:
-        rgblight_sethsv_range( 0, 0, 0, 0, 2);
+        // rgblight_sethsv_range( 0, 0, 0, 0, 2);
         cocot_set_scroll_mode(false);
         break;
     }
-    rgblight_set_effect_range( 2, 10);
+    // rgblight_set_effect_range( 2, 10);
       return state;
 };
 
